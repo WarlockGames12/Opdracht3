@@ -3,38 +3,43 @@
 namespace Opdracht3
 {
 
-    
 
-    public class Tile
+    class Program
     {
-        private int heigh;
-        private int widt;
 
-        public Tile(int Tileheight, int Tilewidth)
+        static void Main(string[] args)
         {
-            widt = Tilewidth;
-            heigh = Tileheight;
+            RoomInside room = new RoomInside(10, 10);
+            
         }
-    }
 
-    public class Room
-    {
-
-        Tile[][] tile = new Tile[10][];
-
-        public Room(int height, int width)
+        private class Tile
         {
-            for (int i = 0; i < length; i++)
-            {
 
+        }
+
+        private class RoomInside
+        {
+            private Tile[][] tiles;
+
+            public RoomInside(int width, int height)
+            {
+                this.tiles = new Tile[height][];
+
+                for (int i = 0; i < height; i++)
+                {
+                    this.tiles[i] = new Tile[width];
+
+                    for (int j = 0; j < width; j++)
+                    {
+                        this.tiles[i][j] = new Tile();
+                        
+                    }
+                }
             }
         }
 
-        
-
-
-
-
+       
     }
 }
     
